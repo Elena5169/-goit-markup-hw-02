@@ -16,6 +16,12 @@ body {
     list-style: none;
 }
 
+.container-first {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .logo {
     color: #000000;
     font-family: Raleway, sans-serif;
@@ -29,16 +35,20 @@ body {
 }
 
 .nav-link {
+    display: block;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.17;
     list-style: none;
     text-decoration-line: none;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 .nav-link {
     color: var(--title-text-color);
     text-decoration-line: none;
+    background-color: tomato;
 }
 .nav-link:hover,
 .nav-link:focus {
@@ -47,24 +57,45 @@ body {
  .nav-link.current {
     color: var(--accent-color);
  }
+ .site-nav {
+    display: flex;
+ }
+  .site-nav li {
+    margin-right: 50px;
+
+  }
+  .site-nav li:not(:last-child) {
+    margin-right: 40;
+  } 
+ 
 
  .contacts {
+        display: flex;
         font-weight: 500;
         font-size: 14px;
         list-style: none;
         text-decoration-line: none;
+        display: flex;
+        flex-direction: row;
+        
  }
 
-  .contact-item {
+   .contacts .contact-link + .contact-link {
+        margin-left: 40px;
+  }
+    
+    .contact-item {   
     text-decoration-line: none;
     color: var(--primary-text-color);
-   }
+    }
 
    .contact-item:hover,
    .contact-item:focus {
     color: var(--accent-color);
 
    }
+
+  
  .hero {
     background-color: #2f303a;
  }
@@ -242,5 +273,8 @@ footer .contact-item:focus {
 }
 a {
     text-decoration: none;
+}
+img {
+    display: block;
 }
 
